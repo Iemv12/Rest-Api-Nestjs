@@ -1,8 +1,10 @@
+import { ApiTags } from '@nestjs/swagger';
 import { AnimalService } from './animal.service';
 import { EditAnimalDto } from './dto/edit-animal.dto';
 import { CreateAnimalDto } from './dto/create-animal.dto';
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
 
+@ApiTags('Animal')
 @Controller('animal')
 export class AnimalController {
     constructor(
